@@ -1,5 +1,5 @@
 # **Projekts**
-***
+
 ## Apraksts
 web lapa/soc. tīkls animāciju studijai "Studio Ghibli"
 
