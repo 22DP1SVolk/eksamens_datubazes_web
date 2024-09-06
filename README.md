@@ -1,7 +1,7 @@
 # **Projekts**
 
 ## Apraksts
-web lapa animāciju studijai "Studio Ghibli"
+web lapa animāciju filmu studijai "Studio Ghibli"
 
 ## Funkcijas
 * lietotāju reģistrācija
