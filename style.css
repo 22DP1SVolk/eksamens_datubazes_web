@@ -1,7 +1,15 @@
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Sawarabi Gothic', sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('https://wallpapers.com/images/hd/studio-ghibli-howl-s-moving-castle-j40hqc63s09xvdtw.webp'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire body */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
 }
 
 .navbar {
@@ -43,29 +51,55 @@ li a {
     font-weight: normal;
 }
 
-li:not(:last-child) {
-    position: relative; /* Position relative for absolute child */
+/* li:not(:last-child) {
+    position: relative;
 }
 
 li:not(:last-child)::after {
-    content: ""; /* Use an empty content */
-    position: absolute; /* Absolute positioning */
-    left: 100%; /* Position to the right of the link */
-    margin-left: 50px; /* Space before the separator */
-    background-color: rgba(255, 255, 255, 0.25); /* Separator color */
-    width: 2px; /* Width of the separator */
-    height: 35px; /* Height of the separator */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for perfect centering */
-}
+    content: "";
+    position: absolute;
+    left: 100%;
+    margin-left: 50px;
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 2px;
+    height: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+} */
 
 li a:hover {
-    color: #FDE8C8; /* Gentle, earthy hover color */
-    transform: translateY(-5px) scale(1.07); /* Floating hover effect */
+    color: #FDE8C8;
+    transform: translateY(-5px) scale(1.07);
 }
 
 .active {
     color: #FDE8C8;
+}
+
+.flex-container {
+    display: flex;
+    background-color: none;
+    justify-content: center;
+    margin-top: 41px;
+    min-height: calc(100vh - 60px);
+    width: 100vw;
+    /* z-index: 1; */
+}
+
+.flex-container > div {
+    background-color: #FDE8C8;
+    margin: 50px;
+    padding: 10px; /* Reduced padding for a tighter fit */
+    font-size: small;
+    /* text-align: left; */
+    border-radius: 8px;
+    /* box-shadow: 5px 3px 10px #686666; */
+    width: 2000px; /* Fixed width */
+    height: 800px; /* Fixed height to maintain consistency */
+    display: flex; /* Enable flexbox for the container */
+    flex-direction: column; /* Stack children vertically */
+    overflow: hidden; /* Hide overflow to prevent button overlap */
+    opacity: 0.9;
 }
 
 /* For screens up to 1024px (iPads in landscape and portrait mode) */
