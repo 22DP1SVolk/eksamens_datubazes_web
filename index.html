@@ -1,26 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
-    <title>Responsive Navbar</title>
+    <title>Studio Ghibli</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="navbar">
-        <div id="myNavbar">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="#news">NEWS</a></li>
-                <li><a href="#news">EVENTS</a></li>
-                <li><a href="#movies">MOVIES</a></li>
-                <li><a href="#contact">SHOP</a></li>
-                <li><a href="#museum">MUSEUM</a></li>
-                <li><a href="#creators">CREATORS</a></li>
-            </ul>
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img 
+                    src="ghibli logo.png" 
+                    alt="Studio Ghibli Logo" 
+                    class="logo">
+                <div class="nav-toggle" id="nav-toggle" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <hr class="divider">
+            <nav class="nav" id="nav-list">
+                <ul>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+    <!-- Overlay for Navigation -->
+    <div class="overlay" id="overlay"></div>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Studio Ghibli</h1>
+                <p>Discover the magic of Studio Ghibli's world-renowned animated films.</p>
+                <a href="#movies" class="cta-button">Explore Movies</a>
+            </div>
+        </section>
+
+        <!-- Movies Section -->
+        <section id="movies" class="movies">
+            <div class="container">
+                <h2>Featured Films</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <img src="https://via.placeholder.com/400x600" alt="Spirited Away">
+                        <h3>Spirited Away</h3>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://via.placeholder.com/400x600" alt="My Neighbor Totoro">
+                        <h3>My Neighbor Totoro</h3>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://via.placeholder.com/400x600" alt="Princess Mononoke">
+                        <h3>Princess Mononoke</h3>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://via.placeholder.com/400x600" alt="Howl's Moving Castle">
+                        <h3>Howl's Moving Castle</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="news">
+            <div class="container">
+                <h2>Latest News</h2>
+                <div class="news-grid">
+                    <article class="news-item">
+                        <h3>New Studio Ghibli Merchandise Released</h3>
+                        <p>Check out our latest collection inspired by Spirited Away and Totoro.</p>
+                    </article>
+                    <article class="news-item">
+                        <h3>Studio Ghibli Museum Reopens</h3>
+                        <p>The Ghibli Museum in Mitaka, Tokyo, is now welcoming visitors again!</p>
+                    </article>
+                    <article class="news-item">
+                        <h3>Upcoming Film Announcement</h3>
+                        <p>Stay tuned for an exciting new project from Studio Ghibli.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Studio Ghibli</h2>
+                <p>
+                    Studio Ghibli is a Japanese animation studio founded by Hayao Miyazaki and Isao Takahata.
+                    Known for its breathtaking artistry and heartfelt storytelling, it has produced award-winning
+                    films like *Spirited Away* and *Princess Mononoke*.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Studio Ghibli Fans. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
