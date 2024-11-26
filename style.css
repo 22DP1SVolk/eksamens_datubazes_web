@@ -1,117 +1,204 @@
-html, body {
-    height: 100%;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Sawarabi Gothic', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('https://wallpapers.com/images/hd/studio-ghibli-howl-s-moving-castle-j40hqc63s09xvdtw.webp'); /* Replace with your image URL */
-    background-size: cover; /* Cover the entire body */
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
+    font-family: 'Montserrat', 'ITC Avant Garde Gothic', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
 }
 
-.navbar {
-    position: relative; /* Allows positioning of children */
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(90deg, #86BBD8, #A5D5AB); /* Soft, nature-inspired gradient */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 5px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    border-bottom: 2px solid #A5D5AB;
-}
-
-li {
-    position: relative;
-}
-
-li a {
-    display: block;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 12px 20px;
+a {
     text-decoration: none;
-    border-radius: 10px;
-    transition: color 0.4s ease, transform 0.4s ease;
-    font-weight: normal;
+    color: inherit;
 }
 
-/* li:not(:last-child) {
-    position: relative;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-li:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    left: 100%;
-    margin-left: 50px;
-    background-color: rgba(255, 255, 255, 0.25);
-    width: 2px;
-    height: 35px;
-    top: 50%;
-    transform: translateY(-50%);
-} */
-
-li a:hover {
-    color: #FDE8C8;
-    transform: translateY(-5px) scale(1.07);
-}
-
-.active {
-    color: #FDE8C8;
-}
-
-.flex-container {
+/* Header */
+.header {
+    background-color: #1c1c1c;
+    padding: 1rem 0;
     display: flex;
-    background-color: none;
+    flex-direction: column; /* Stack logo and nav bar */
+    align-items: center; /* Center content horizontally */
+}
+
+.header .logo {
+    max-height: 60px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center navigation items horizontally */
+    gap: 2rem; /* Adjust spacing between links */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav li {
+    font-weight: 700;
+}
+
+.nav a:hover {
+    color: #7ec7a7;
+}
+
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the logo horizontally */
+    gap: 0.5rem; /* Space between logo and text */
+    margin-bottom: 1rem; /* Space below the logo section */
+}
+
+/* Logo */
+.logo {
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    background-image: url('https://via.placeholder.com/1920x1080');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 41px;
-    min-height: calc(100vh - 60px);
-    width: 100vw;
-    /* z-index: 1; */
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding: 0 2rem; /* Add padding on left and right for responsiveness */
 }
 
-.flex-container > div {
-    background-color: #FDE8C8;
-    margin: 50px;
-    padding: 10px; /* Reduced padding for a tighter fit */
-    font-size: small;
-    /* text-align: left; */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 800px; /* Limit the width of the content */
+    padding: 2rem; /* Add padding inside the content area */
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem; /* Add space between paragraph and button */
+}
+
+.cta-button {
+    background-color: #7ec7a7;
+    color: #121212;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #5ea487;
+}
+
+
+/* Movies Section */
+.movies {
+    padding: 2rem 0;
+    background-color: #1c1c1c;
+}
+
+.movies h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.movie-card {
+    background: #2c2c2c;
     border-radius: 8px;
-    /* box-shadow: 5px 3px 10px #686666; */
-    width: 2000px; /* Fixed width */
-    height: 800px; /* Fixed height to maintain consistency */
-    display: flex; /* Enable flexbox for the container */
-    flex-direction: column; /* Stack children vertically */
-    overflow: hidden; /* Hide overflow to prevent button overlap */
-    opacity: 0.9;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
 }
 
-/* For screens up to 1024px (iPads in landscape and portrait mode) */
-@media (max-width: 1024px) {
-    
+.movie-card img {
+    width: 100%;
+    height: auto;
 }
 
-/* For screens up to 768px (smaller tablets) */
-@media (max-width: 768px) {
-    
+.movie-card:hover {
+    transform: translateY(-10px);
 }
 
-/* For screens up to 480px (mobile phones) */
-@media (max-width: 480px) {
+/* News Section */
+.news {
+    padding: 2rem 0;
+    background-color: #121212;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.news-item {
+    background: #1c1c1c;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* About Section */
+.about {
+    padding: 2rem 0;
+    background-color: #1c1c1c;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #121212;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
 }
